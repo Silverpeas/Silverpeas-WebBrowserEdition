@@ -30,7 +30,7 @@ import org.silverpeas.core.util.JSONCodec;
 import org.silverpeas.core.util.StringUtil;
 import org.silverpeas.core.wbe.WbeFile;
 import org.silverpeas.core.wbe.WbeUser;
-import org.silverpeas.core.webapi.base.annotation.Authenticated;
+import org.silverpeas.core.web.rs.annotation.Authenticated;
 import org.silverpeas.core.webapi.wbe.AbstractWbeFileResource;
 import org.silverpeas.core.webapi.wbe.WbeFileEditionContext;
 import org.silverpeas.core.webapi.wbe.WbeFileWrapper;

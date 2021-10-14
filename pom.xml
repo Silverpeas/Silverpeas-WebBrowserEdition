@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.silverpeas</groupId>
     <artifactId>silverpeas-project</artifactId>
-    <version>1.5-build210329</version>
+    <version>1.5-build211013</version>
   </parent>
   
   <artifactId>wbe</artifactId>
@@ -75,6 +75,12 @@
     <dependency>
       <groupId>org.silverpeas.core</groupId>
       <artifactId>silverpeas-core</artifactId>
+      <version>${silverpeas.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.silverpeas.core</groupId>
+      <artifactId>silverpeas-core-rs</artifactId>
       <version>${silverpeas.version}</version>
       <scope>provided</scope>
     </dependency>
