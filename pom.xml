@@ -46,7 +46,7 @@
     <!-- property used by the CI to both deploy a build version and release the next stable version -->
     <next.release>1.0</next.release>
     <!-- Version of Silverpeas on which it depends -->
-    <silverpeas.version>6.3-build210401</silverpeas.version>
+    <silverpeas.version>6.3-build211015</silverpeas.version>
   </properties>
 
   <dependencies>
@@ -96,11 +96,6 @@
       <version>${silverpeas.version}</version>
       <scope>test</scope>
       <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>org.jboss.weld</groupId>
-      <artifactId>weld-junit5</artifactId>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
