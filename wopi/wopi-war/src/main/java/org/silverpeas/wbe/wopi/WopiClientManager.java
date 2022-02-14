@@ -88,6 +88,11 @@ public class WopiClientManager implements WbeClientManager {
   }
 
   @Override
+  public String getName(final String language) {
+    return "LibreOffice Online";
+  }
+
+  @Override
   public void clear() {
     baseUrlByMimeTypes.clear();
     baseUrlByExtension.clear();
