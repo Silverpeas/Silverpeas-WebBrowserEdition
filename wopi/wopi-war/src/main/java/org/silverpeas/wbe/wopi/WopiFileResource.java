@@ -106,7 +106,7 @@ public class WopiFileResource extends AbstractWbeFileResource {
             .put("Size", file.size())
             .put("UserId", user.getId())
             .put("Version", file.version())
-            .put(LAST_MODIFIED_TIME_FIELD, toIso8601(file.lastModificationDate(), true))
+            .put(LAST_MODIFIED_TIME_FIELD, formatLastModifiedTime(file))
             // Host capabilities
             .put("SupportsContainers", false)
             .put("SupportsDeleteFile", false)
@@ -231,9 +231,23 @@ public class WopiFileResource extends AbstractWbeFileResource {
           .filter(f -> getBooleanValue(request.getHeader(f)))
           .ifPresent(f -> getHostManager().revokeFile(file));
       final String json = JSONCodec.encodeObject(
-          o -> o.put(LAST_MODIFIED_TIME_FIELD, toIso8601(file.lastModificationDate(), true)));
+          o -> o.put(LAST_MODIFIED_TIME_FIELD, formatLastModifiedTime(file)));
       return Response.ok().type(MediaType.APPLICATION_JSON).entity(json).build();
     });
+  }
+
+  /**
+   * Formats for 'LastModifiedTime' field which MUST contains the ISO8601 round-trip time format
+   * indicating the new/updated file's modified time in storage after successful save.
+   * <p>
+   * WARNING six digits of nano part MUST exists event if there is no nano data.
+   * </p>
+   * @param file a {@link WbeFile} instance (which is indeed into the WOPI context a
+   * {@link WbeFileWrapper} instance).
+   * @return an ISO8601 formatted string.
+   */
+  private String formatLastModifiedTime(final WbeFile file) {
+    return toIso8601(file.lastModificationDate(), true).replace("Z", ".000000Z");
   }
 
   @Override
