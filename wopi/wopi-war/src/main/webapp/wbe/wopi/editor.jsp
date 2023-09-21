@@ -30,7 +30,6 @@
 <%@ taglib uri="http://www.silverpeas.com/tld/silverFunctions" prefix="silfn" %>
 
 <c:set var="origin" value='<%=WopiSettings.getWopiClientBaseUrl().orElse(StringUtil.EMPTY).replaceFirst("(https?://[^/]+)(.*)", "$1")%>'/>
-<c:set var="wopiClientUrl" value="${requestScope.WopiClientUrl}"/>
 <c:set var="currentUser" value="<%=User.getCurrentRequester()%>"/>
 <c:set var="wbeUser" value="${requestScope.WopiUser}"/>
 <jsp:useBean id="wbeUser" type="org.silverpeas.core.wbe.WbeUser"/>
@@ -40,6 +39,8 @@
 <c:set var="uiDefaults" value="<%=WopiSettings.getUIDefaults()%>"/>
 
 <view:sp-page>
+  <c:set var="userLanguage" value="${requestScope.userLanguage}"/>
+  <c:set var="wopiClientUrl" value="${requestScope.WopiClientUrl}&lang=${userLanguage}"/>
   <view:sp-head-part minimalSilverpeasScriptEnv="true">
     <meta charset="utf-8">
     <%-- Enable IE Standards mode --%>
