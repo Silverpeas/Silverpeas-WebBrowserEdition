@@ -34,8 +34,8 @@ import java.util.Optional;
 import static java.text.MessageFormat.format;
 import static javax.ws.rs.core.Response.Status.CONFLICT;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
-import static org.silverpeas.core.util.StringUtil.isDefined;
 import static org.silverpeas.core.wbe.WbeLogger.logger;
+import static org.silverpeas.kernel.util.StringUtil.isDefined;
 import static org.silverpeas.wbe.wopi.WopiFileResource.WOPI_LOCK_HEADER;
 import static org.silverpeas.wbe.wopi.util.WopiSettings.isLockCapabilityEnabled;
 

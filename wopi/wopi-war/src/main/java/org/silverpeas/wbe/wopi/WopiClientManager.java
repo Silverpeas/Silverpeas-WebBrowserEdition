@@ -51,8 +51,8 @@ import static java.util.Optional.*;
 import static javax.ws.rs.core.Response.Status.OK;
 import static org.silverpeas.core.util.HttpUtil.httpClientTrustingAnySslContext;
 import static org.silverpeas.core.util.HttpUtil.toUrl;
-import static org.silverpeas.core.util.StringUtil.isDefined;
 import static org.silverpeas.core.wbe.WbeLogger.logger;
+import static org.silverpeas.kernel.util.StringUtil.isDefined;
 import static org.silverpeas.wbe.wopi.util.WopiSettings.*;
 
 /**

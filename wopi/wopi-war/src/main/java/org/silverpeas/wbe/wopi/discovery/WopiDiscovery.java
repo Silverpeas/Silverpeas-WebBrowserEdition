@@ -24,7 +24,7 @@
 
 package org.silverpeas.wbe.wopi.discovery;
 
-import org.silverpeas.core.SilverpeasRuntimeException;
+import org.silverpeas.kernel.SilverpeasRuntimeException;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

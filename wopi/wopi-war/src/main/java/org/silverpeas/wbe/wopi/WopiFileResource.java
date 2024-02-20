@@ -27,7 +27,6 @@ package org.silverpeas.wbe.wopi;
 import org.silverpeas.core.admin.user.model.User;
 import org.silverpeas.core.annotation.WebService;
 import org.silverpeas.core.util.JSONCodec;
-import org.silverpeas.core.util.StringUtil;
 import org.silverpeas.core.wbe.WbeFile;
 import org.silverpeas.core.wbe.WbeUser;
 import org.silverpeas.core.web.rs.annotation.Authenticated;
@@ -35,6 +34,7 @@ import org.silverpeas.core.webapi.wbe.AbstractWbeFileResource;
 import org.silverpeas.core.webapi.wbe.WbeFileEditionContext;
 import org.silverpeas.core.webapi.wbe.WbeFileWrapper;
 import org.silverpeas.core.webapi.wbe.WbeResponseError;
+import org.silverpeas.kernel.util.StringUtil;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -58,12 +58,12 @@ import static java.util.Optional.*;
 import static javax.ws.rs.core.MediaType.APPLICATION_OCTET_STREAM;
 import static javax.ws.rs.core.Response.Status.CONFLICT;
 import static org.silverpeas.core.date.TemporalFormatter.toIso8601;
-import static org.silverpeas.core.util.StringUtil.*;
 import static org.silverpeas.core.util.URLUtil.getFullApplicationURL;
 import static org.silverpeas.core.util.URLUtil.getServerURL;
 import static org.silverpeas.core.util.file.FileServerUtils.getImageURL;
 import static org.silverpeas.core.wbe.WbeLogger.logger;
 import static org.silverpeas.core.wbe.WbeSettings.getWbeUserIdPrefix;
+import static org.silverpeas.kernel.util.StringUtil.*;
 import static org.silverpeas.wbe.wopi.util.WopiSettings.*;
 
 /**
