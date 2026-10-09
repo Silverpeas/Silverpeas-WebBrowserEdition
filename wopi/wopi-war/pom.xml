@@ -56,15 +56,10 @@
   <dependencies>
     <dependency>
       <groupId>com.fasterxml.jackson.module</groupId>
-      <artifactId>jackson-module-jaxb-annotations</artifactId>
+      <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>javax.servlet-api</artifactId>
-      <version>3.0.1</version>
-      <scope>provided</scope>
-    </dependency>
+
     <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>jaxb-runtime</artifactId>
@@ -85,13 +80,11 @@
         <executions>
           <execution>
             <goals>
-              <goal>jslint</goal>
               <goal>compress</goal>
             </goals>
           </execution>
         </executions>
         <configuration>
-          <jswarn>false</jswarn>
           <excludes>
             <exclude>**/*.min.*</exclude>
             <exclude>**/*-min.*</exclude>
