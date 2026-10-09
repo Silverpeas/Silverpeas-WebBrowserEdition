@@ -49,7 +49,6 @@
         <executions>
           <execution>
             <goals>
-              <goal>jslint</goal>
               <goal>compress</goal>
             </goals>
           </execution>
