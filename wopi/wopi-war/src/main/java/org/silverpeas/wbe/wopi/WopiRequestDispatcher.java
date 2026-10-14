@@ -30,13 +30,13 @@ import org.silverpeas.core.wbe.WbeFile;
 import org.silverpeas.core.wbe.WbeUser;
 import org.silverpeas.core.webapi.wbe.WbeFileEdition;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.core.UriBuilder;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.core.UriBuilder;
 import java.util.Optional;
 
 import static java.text.MessageFormat.format;
 import static java.util.Optional.of;
-import static javax.ws.rs.core.UriBuilder.fromUri;
+import static jakarta.ws.rs.core.UriBuilder.fromUri;
 import static org.silverpeas.core.wbe.WbeLogger.logger;
 import static org.silverpeas.core.webapi.wbe.WbeFileEdition.ACCESS_TOKEN_PARAM;
 import static org.silverpeas.wbe.wopi.util.WopiSettings.getWopiHostServiceBaseUrl;

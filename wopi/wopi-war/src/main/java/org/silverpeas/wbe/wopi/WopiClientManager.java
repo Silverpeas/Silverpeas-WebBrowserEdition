@@ -33,7 +33,7 @@ import org.silverpeas.core.wbe.WbeUser;
 import org.silverpeas.wbe.wopi.discovery.WopiDiscovery;
 import org.silverpeas.wbe.wopi.util.WopiSettings;
 
-import javax.ws.rs.WebApplicationException;
+import jakarta.ws.rs.WebApplicationException;
 import java.io.InputStream;
 import java.net.http.HttpResponse;
 import java.time.Duration;
@@ -48,7 +48,7 @@ import static java.text.MessageFormat.format;
 import static java.time.temporal.ChronoUnit.HOURS;
 import static java.time.temporal.ChronoUnit.SECONDS;
 import static java.util.Optional.*;
-import static javax.ws.rs.core.Response.Status.OK;
+import static jakarta.ws.rs.core.Response.Status.OK;
 import static org.silverpeas.core.util.HttpUtil.httpClientTrustingAnySslContext;
 import static org.silverpeas.core.util.HttpUtil.toUrl;
 import static org.silverpeas.core.wbe.WbeLogger.logger;

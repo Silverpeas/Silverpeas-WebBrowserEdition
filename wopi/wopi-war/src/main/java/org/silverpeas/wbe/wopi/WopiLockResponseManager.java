@@ -27,12 +27,12 @@ package org.silverpeas.wbe.wopi;
 import org.silverpeas.core.annotation.Service;
 import org.silverpeas.core.wbe.WbeFile;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.core.Response;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.ws.rs.core.Response;
 import java.util.Optional;
 
 import static java.text.MessageFormat.format;
-import static javax.ws.rs.core.Response.Status.CONFLICT;
+import static jakarta.ws.rs.core.Response.Status.CONFLICT;
 import static org.apache.commons.lang3.StringUtils.EMPTY;
 import static org.silverpeas.core.wbe.WbeLogger.logger;
 import static org.silverpeas.kernel.util.StringUtil.isDefined;
